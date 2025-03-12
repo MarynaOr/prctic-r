@@ -2,7 +2,7 @@
 import './App.css'
 
 function App() {
-  return<><p>Hello</p></>
+  return<></>
 }
 
 export default App
