@@ -12,6 +12,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
+import { todosReducer } from "./component/Redux/todoSlice";
 
 const persistConfig = {
   key: "counter-persist",
@@ -23,6 +24,10 @@ const persistConfig = {
 export const store = configureStore({
   reducer: {
     counter: persistReducer(persistConfig, counterReducer),
+    todos: todosReducer,
+    
+
+
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
