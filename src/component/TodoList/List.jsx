@@ -7,7 +7,7 @@ const List = () => {
     <>
       <ul>
         {todos.map(item =>{
-            <Item {...item} key={item.id} />
+          return  <Item {...item} key={item.id} />
         })}
       </ul>
     </>

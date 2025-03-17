@@ -6,16 +6,19 @@ const slice = createSlice({
     name: 'todos',
     initialState,
     reducers: {
-        inkrement: (state, option )=> {
-            state.todos ++
-        }
+       deleteTodo: (state, action) =>{
+        state.items = state.items.filter(item=> item.id !== action.payload)
+       },
+       addTodo: (state, action) =>{
+        state.items.push(action.payload)
+       }
     }
 })
 
 
 
 export const todosReducer = slice.reducer
-
+export const {deleteTodo, addTodo} = slice.actions
 
 
 
