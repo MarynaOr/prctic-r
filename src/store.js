@@ -13,6 +13,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { todosReducer } from "./component/Redux/todoSlice";
+import { filterReducer } from "./component/Redux/filterSlice";
 
 const persistConfig = {
   key: "counter-persist",
@@ -25,7 +26,7 @@ export const store = configureStore({
   reducer: {
     counter: persistReducer(persistConfig, counterReducer),
     todos: todosReducer,
-    
+    filter: filterReducer,
 
 
   },
