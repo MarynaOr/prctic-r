@@ -1,5 +1,5 @@
 import "./App.css";
-import { Counter } from "./component/Counter/counter";
+// import { Counter } from "./component/Counter/Counter";
 import TodoList from "./component/TodoList/TodoList";
 
 function App() {
