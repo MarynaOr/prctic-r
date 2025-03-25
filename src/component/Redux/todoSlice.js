@@ -11,14 +11,20 @@ const slice = createSlice({
        },
        addTodo: (state, action) =>{
         state.items.push(action.payload)
-       }
+       },
+       editTodo: (state, action) => {
+        //пробігтись по масиву і отримати новий тайтл
+        const item = state.items.find(item => item.id === action.payload.id)
+       if(item){ item.todo = action.payload.todo}
+
+       },
     }
 })
 
 
 
 export const todosReducer = slice.reducer
-export const {deleteTodo, addTodo} = slice.actions
+export const {deleteTodo, addTodo, editTodo} = slice.actions
 
 
 
